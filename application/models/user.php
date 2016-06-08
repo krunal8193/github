@@ -40,8 +40,10 @@ Class User extends CI_Model
                 'user_id' => $id,
                 'user_name' =>  $profile['first_name'].' '.$profile['last_name'],
                 'gender' => $profile['gender'],
+                'user_fb_id' => $profile['id']
             );
             $this->db->insert('user_meta',$data1);
+            return array('user_id'=>$id,'user_fb_id'=>$profile['id'], 'user_name'=>$profile['first_name'].' '.$profile['last_name']);
         }
     }
     function is_email($email) {
@@ -51,7 +53,7 @@ Class User extends CI_Model
         $query = $this->db->get();
         
         if ($query->num_rows() == 1) {
-            return $query->result();
+            return true;
         } else {
             return false;
         }

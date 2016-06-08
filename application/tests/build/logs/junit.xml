@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="CodeIgniter Application Test Suite" tests="1" assertions="1" failures="1" errors="0" time="0.040779">
+    <testsuite name="Login_Test" file="C:\xampp\htdocs\github\application\tests\contrallers\login_test.php" fullPackage="Login" tests="1" assertions="1" failures="1" errors="0" time="0.040779">
+      <testcase name="test_Index" class="Login_Test" file="C:\xampp\htdocs\github\application\tests\contrallers\login_test.php" line="5" assertions="1" time="0.040779">
+        <failure type="PHPUnit_Framework_ExpectationFailedException">Login_Test::test_Index
+Failed asserting that two strings are equal.
+--- Expected
++++ Actual
+@@ @@
+-'
+-A PHP Error was encountered
+-
+-Severity:    Warning
+-Message:     session_start(): Cannot send session cookie - headers already sent by (output started at C:\xampp\php\pear\PHPUnit\TextUI\TestRunner.php:459)
+-Filename:    C:\xampp\htdocs\github\application\libraries\facebook.php
+-Line Number: 60
+-
+-Backtrace:
+-	File: C:\xampp\htdocs\github\application\libraries\facebook.php
+-	Line: 60
+-	Function: session_start
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\replacing\core\Loader.php
+-	Line: 1297
+-	Function: __construct
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\replacing\core\Loader.php
+-	Line: 1091
+-	Function: _ci_init_library
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\replacing\core\Loader.php
+-	Line: 218
+-	Function: _ci_load_library
+-
+-	File: C:\xampp\htdocs\github\application\controllers\Login.php
+-	Line: 15
+-	Function: library
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\CIPHPUnitTestRequest.php
+-	Line: 311
+-	Function: __construct
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\CIPHPUnitTestRequest.php
+-	Line: 226
+-	Function: createAndCallController
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\CIPHPUnitTestRequest.php
+-	Line: 137
+-	Function: callControllerMethod
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\CIPHPUnitTestCase.php
+-	Line: 114
+-	Function: request
+-
+-	File: C:\xampp\htdocs\github\application\tests\contrallers\login_test.php
+-	Line: 6
+-	Function: request
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestCase.php
+-	Line: 976
+-	Function: invokeArgs
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestCase.php
+-	Line: 831
+-	Function: runTest
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestResult.php
+-	Line: 648
+-	Function: runBare
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestCase.php
+-	Line: 776
+-	Function: run
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestSuite.php
+-	Line: 775
+-	Function: run
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestSuite.php
+-	Line: 745
+-	Function: runTest
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestSuite.php
+-	Line: 705
+-	Function: run
+-
+-	File: C:\xampp\php\pear\PHPUnit\TextUI\TestRunner.php
+-	Line: 349
+-	Function: run
+-
+-	File: C:\xampp\php\pear\PHPUnit\TextUI\Command.php
+-	Line: 176
+-	Function: doRun
+-
+-	File: C:\xampp\php\pear\PHPUnit\TextUI\Command.php
+-	Line: 129
+-	Function: run
+-
+-	File: C:\xampp\php\phpunit
+-	Line: 46
+-	Function: main
+-
+-
+-
+-A PHP Error was encountered
+-
+-Severity:    Warning
+-Message:     session_start(): Cannot send session cache limiter - headers already sent (output started at C:\xampp\php\pear\PHPUnit\TextUI\TestRunner.php:459)
+-Filename:    C:\xampp\htdocs\github\application\libraries\facebook.php
+-Line Number: 60
+-
+-Backtrace:
+-	File: C:\xampp\htdocs\github\application\libraries\facebook.php
+-	Line: 60
+-	Function: session_start
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\replacing\core\Loader.php
+-	Line: 1297
+-	Function: __construct
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\replacing\core\Loader.php
+-	Line: 1091
+-	Function: _ci_init_library
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\replacing\core\Loader.php
+-	Line: 218
+-	Function: _ci_load_library
+-
+-	File: C:\xampp\htdocs\github\application\controllers\Login.php
+-	Line: 15
+-	Function: library
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\CIPHPUnitTestRequest.php
+-	Line: 311
+-	Function: __construct
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\CIPHPUnitTestRequest.php
+-	Line: 226
+-	Function: createAndCallController
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\CIPHPUnitTestRequest.php
+-	Line: 137
+-	Function: callControllerMethod
+-
+-	File: C:\xampp\htdocs\github\application\tests\_ci_phpunit_test\CIPHPUnitTestCase.php
+-	Line: 114
+-	Function: request
+-
+-	File: C:\xampp\htdocs\github\application\tests\contrallers\login_test.php
+-	Line: 6
+-	Function: request
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestCase.php
+-	Line: 976
+-	Function: invokeArgs
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestCase.php
+-	Line: 831
+-	Function: runTest
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestResult.php
+-	Line: 648
+-	Function: runBare
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestCase.php
+-	Line: 776
+-	Function: run
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestSuite.php
+-	Line: 775
+-	Function: run
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestSuite.php
+-	Line: 745
+-	Function: runTest
+-
+-	File: C:\xampp\php\pear\PHPUnit\Framework\TestSuite.php
+-	Line: 705
+-	Function: run
+-
+-	File: C:\xampp\php\pear\PHPUnit\TextUI\TestRunner.php
+-	Line: 349
+-	Function: run
+-
+-	File: C:\xampp\php\pear\PHPUnit\TextUI\Command.php
+-	Line: 176
+-	Function: doRun
+-
+-	File: C:\xampp\php\pear\PHPUnit\TextUI\Command.php
+-	Line: 129
+-	Function: run
+-
+-	File: C:\xampp\php\phpunit
+-	Line: 46
+-	Function: main
+-
+-
+-&lt;!DOCTYPE html&gt;
+-&lt;html lang="en"&gt;
+-    &lt;head&gt;
+-        &lt;meta charset="utf-8"&gt;
+-        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+-        &lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;
+-        &lt;!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags --&gt;
+-        &lt;meta name="description" content=""&gt;
+-        &lt;meta name="author" content=""&gt;
+-
+-        &lt;title&gt;Login | Signin&lt;/title&gt;
+-
+-        &lt;!-- Bootstrap core CSS --&gt;
+-        &lt;link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"&gt;
+-        &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/css/bootstrap-datepicker.css"&gt;
+-        &lt;link rel="stylesheet" href="http://localhost/github/assets/css/font-awesome.min.css"&gt;
+-
+-        &lt;!-- Custom styles for this template --&gt;
+-        &lt;link href="http://localhost/github/assets/css/custom.css" rel="stylesheet"&gt;
+-
+-        &lt;script src="http://code.jquery.com/jquery-1.10.2.js"&gt;&lt;/script&gt;
+-        
+-        &lt;script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.1/js/bootstrap-datepicker.js"&gt;&lt;/script&gt;
+-    &lt;/head&gt;
+-
+-    &lt;body&gt;&lt;div class="container"&gt;
+-	&lt;div class="row"&gt;
+-		&lt;div class="col-md-6 col-md-offset-3"&gt;
+-			&lt;div&gt;
+-							&lt;/div&gt;
+-			&lt;div class="panel panel-login"&gt;
+-				&lt;div class="panel-heading"&gt;
+-					&lt;div class="row"&gt;
+-						&lt;div class="col-xs-6"&gt;
+-							&lt;a href="http://localhost/github/index.php/login" class="active" id="login-form-link"&gt;Login&lt;/a&gt;
+-						&lt;/div&gt;
+-						&lt;div class="col-xs-6"&gt;
+-							&lt;a href="http://localhost/github/index.php/signin" id="register-form-link"&gt;Register&lt;/a&gt;
+-						&lt;/div&gt;
+-					&lt;/div&gt;
+-				&lt;/div&gt;
+-			&lt;/div&gt;
+-			&lt;div class="panel panel-login"&gt;
+-				&lt;div class="panel-body"&gt;
+-					&lt;div class="row"&gt;
+-						&lt;div class="col-lg-12"&gt;
+-							&lt;form action="http://localhost/github/index.php/Login/verifyLogin" method="post" accept-charset="utf-8"&gt;
+-								&lt;div class="form-group"&gt;
+-									&lt;input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="Username" value=""&gt;
+-								&lt;/div&gt;
+-								&lt;div class="form-group"&gt;
+-									&lt;input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password"&gt;
+-								&lt;/div&gt;
+-								&lt;div class="form-group"&gt;
+-									&lt;div class="row"&gt;
+-										&lt;div class="col-sm-6 col-sm-offset-3"&gt;
+-											&lt;input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In"&gt;
+-										&lt;/div&gt;
+-									&lt;/div&gt;
+-								&lt;/div&gt;
+-							&lt;/form&gt;
+-							&lt;center&gt; - OR - &lt;/center&gt;
+-							&lt;br&gt;
+-							&lt;div class="form-group"&gt;
+-								&lt;div class="row"&gt;
+-									&lt;div class="col-lg-6 col-sm-offset-3"&gt;
+-										&lt;div class="text-center"&gt;
+-											&lt;a href="http://localhost/github/index.php/login/loginfb"&gt;&lt;button class="form-control btn btn-primary"&gt;Connect With FB&lt;/button&gt;&lt;/a&gt;
+-										&lt;/div&gt;
+-									&lt;/div&gt;
+-								&lt;/div&gt;
+-							&lt;/div&gt;
+-						&lt;/div&gt;
+-					&lt;/div&gt;
+-				&lt;/div&gt;
+-			&lt;/div&gt;
+-		&lt;/div&gt;
+-	&lt;/div&gt;
+-&lt;/div&gt;	&lt;/body&gt;
+-&lt;/html&gt;'
++'header'
+
+C:\xampp\htdocs\github\application\tests\contrallers\login_test.php:8
+</failure>
+      </testcase>
+    </testsuite>
+  </testsuite>
+</testsuites>

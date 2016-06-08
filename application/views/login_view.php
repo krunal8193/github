@@ -34,17 +34,17 @@
 										</div>
 									</div>
 								</div>
-								<center> - OR - </center>
-								<br>
-								<div class="form-group">
-									<div class="row">
-										<div class="col-lg-6 col-sm-offset-3">
-											<div class="text-center">
-												<a href="<?php echo $login_url; ?>"><button class="form-control btn btn-primary">Connect With FB</button></a>
-											</div>
+							</form>
+							<center> - OR - </center>
+							<br>
+							<div class="form-group">
+								<div class="row">
+									<div class="col-lg-6 col-sm-offset-3">
+										<div class="text-center">
+											<a href="<?php echo site_url('login/loginfb'); ?>"><button class="form-control btn btn-primary">Connect With FB</button></a>
 										</div>
 									</div>
-								</form>
+								</div>
 							</div>
 						</div>
 					</div>

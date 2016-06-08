@@ -10,8 +10,8 @@ class Login extends CI_Controller {
         
         // Load facebook library and pass associative array which contains appId and secret key
         $this->load->library('facebook', array(
-            'appId' => '483146555224632',
-            'secret' => 'd01444aa3544335d8b98b130b5f0173b'
+            'appId' => 'YOUR APP Id',
+            'secret' => 'YOUR SECRET KEY'
         ));
         
         // Get user's login information
@@ -25,29 +25,24 @@ class Login extends CI_Controller {
    	}
 
 	public function index() {
-		if ($this->fbuser) {
-            $data1['user_profile'] = $this->facebook->api('/me/');
-            
-            // Get logout url of facebook
-            $data1['logout_url'] = $this->facebook->getLogoutUrl(array(
-                'next' => base_url() . 'index.php/login/logout'
-            ));
-            checkFbUser($data1['user_profile']);
+        if (isset($_SESSION['login_detail'])) {
             redirect('timeline');
-        } else {
-            $data1['login_url'] = $this->facebook->getLoginUrl();
         }
 		$this->load->helper(array('form'));
 		$data = array('title' => "Login | Signin");
 		$this->load->view('header',$data);
-		$this->load->view('login_view',$data1);
+		$this->load->view('login_view');
 		$this->load->view('footer');
 	}
 	public function verifyLogin() {
-		$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
-        $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|callback_check_idpass');
-        if ($this->form_validation->run() == FALSE) {
-            $this->index();
+    	if($this->input->post('username') !== null && $this->input->post('password') !== null){
+        	$this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
+            $this->form_validation->set_rules('password', 'Password', 'trim|required|xss_clean|callback_check_idpass');
+            if ($this->form_validation->run() == FALSE) {
+                $this->index();
+            } else {
+                redirect('timeline');
+            }
         } else {
             redirect('timeline');
         }
@@ -79,6 +74,21 @@ class Login extends CI_Controller {
     public function logout(){
     	$this->session->unset_userdata('login_detail');
     	redirect('login');
+    }
+    function loginfb(){
+        if ($this->fbuser) {
+            $data1['user_profile'] = $this->facebook->api('/me/');
+            
+            // Get logout url of facebook
+            $data1['logout_url'] = $this->facebook->getLogoutUrl(array(
+                'next' => base_url() . 'index.php/login/logout'
+            ));
+            checkFbUser($data1['user_profile']);
+            redirect('timeline');
+        } else {
+            $login_url = $this->facebook->getLoginUrl();
+            redirect($login_url);
+        }
     }
     function checkfbuser($profile){
     	$result = $this->user->fblogin($profile);
