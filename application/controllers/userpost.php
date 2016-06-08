@@ -12,7 +12,7 @@ class Userpost extends CI_Controller {
    	}
 	public function imgvid()
 	{
-		S3::setAuth('AKIAJJS5GJ2Q2MTM2C6A', 'OEUgQ5y6hRKQXUgtg87Ov+s1/q1F0YALd4yPFWzd');
+		S3::setAuth('ACCESS KEY', 'SECRET KEY');
 		$allowed =  array('gif','jpg','png','avi','flv','wmv','mp4');
 		$error = array();
 		$post_media = array();
